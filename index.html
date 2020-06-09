@@ -12,7 +12,7 @@
   <div class="wrapper">
     <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
     <div class="speed">
-      <div class="speed-bar">1×</div>
+      <div class="speed-bar noselect">1×</div>
     </div>
   </div>
 
@@ -20,10 +20,8 @@
 	const speed = document.querySelector('.speed');
 	const bar = document.querySelector('.speed-bar');
 	const video = document.querySelector('.flex');
-
 	
 	speed.addEventListener('mousemove', (e) => {
-		e.preventDefault();
 		// console.log('pageY: ' + e.pageY); //how many pixels down from top of viewport
 		// console.log(e.pageY - speed.offsetTop); //height of bar in pixels based on mouse position
 		const height = Math.round(((e.pageY - speed.offsetTop) / speed.clientHeight) * 100);
